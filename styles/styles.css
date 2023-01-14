@@ -104,14 +104,12 @@ hr {
      Latest Courses Styles
  ------------------------
 */
-.courses{
+.courses {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     column-gap: 25px;
 }
-.course{
-    width: 252px;
-}
+
 .course .course-banner img {
     width: 224px;
     height: 104px;
@@ -154,9 +152,46 @@ hr {
     color: #FF4A60;
     width: 90px;
 }
-.course-duration .fa-clock{
+
+.course-duration .fa-clock {
     margin-left: 10px;
 }
-.course-duration span{
+
+.course-duration span {
     margin-left: 10px;
+}
+
+/*------------------
+    media queries
+-------------------*/
+
+/* mobile devices  */
+@media only screen and (max-width:688px) {
+    .container {
+        width: 100%;
+    }
+
+    .players,
+    .blogs,
+    .courses {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .player,
+    .blog,
+    .course {
+        flex-direction: column;
+    }
+}
+
+/* tablet devices  */
+@media only screen and (min-width:688px) and (max-width: 992px) {
+    .conatiner {
+        width: 100%;
+    }
+
+    .players,
+    .courses {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
