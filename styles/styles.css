@@ -9,13 +9,16 @@ body {
 
 main {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .container {
     background: #FFFFFF;
     width: 870px;
     padding: 30px;
+    margin-top: 21px;
+    border-radius: 5px;
 }
 
 hr {
@@ -95,4 +98,65 @@ hr {
 .blog-author a {
     color: #562EFF;
     text-decoration: none;
+}
+
+/*------------------------
+     Latest Courses Styles
+ ------------------------
+*/
+.courses{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 25px;
+}
+.course{
+    width: 252px;
+}
+.course .course-banner img {
+    width: 224px;
+    height: 104px;
+}
+
+.course-title {
+    color: #1E1E1E;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.course-author {
+    color: #ED6B4F;
+    font-size: 14px;
+}
+
+.course-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fa-star {
+    font-size: 12px;
+}
+
+.fa-star.filled {
+    color: #FFC014;
+}
+
+.fa-star.empty {
+    color: #AEAEAE;
+}
+
+.course-duration {
+    background: #FFE4E8;
+    border-radius: 14px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #FF4A60;
+    width: 90px;
+}
+.course-duration .fa-clock{
+    margin-left: 10px;
+}
+.course-duration span{
+    margin-left: 10px;
 }
